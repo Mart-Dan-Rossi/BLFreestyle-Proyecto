@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    --color0:black;
+    --color1: white;
+    --color2: gold;
+    --color3: lightgrey;
+    --paddinggrande: 10px;
+    --paddingmedio: 5px;
+    --margenentresecciones: 3px;
+    --margenesdentrodeseccion: 5px;
+    --anchotituloseccion: 40vw;
+    --fontgrande: xx-large;
+    --fontmediana: x-large;
+}
+
+
+main {
+    width: 100vw;
+    display: flex;
+    background-color: var(--color0);
+    color: black;
+}
+
+main>{
+    margin: var(--margenentresecciones);
+    background-color: var(--color2);
+    padding: var(--paddingmedio);
+    display: flex;
+}
+
+.quienessomos__contenedor {
+    margin: var(--margenesdentrodeseccion);
+}
+
+.quienessomos__contenedor .contenedorseccion__tituloseccion {
+    height: 300px;
+    /* background-image: ; */
+}
+
+.contenedorseccion__contenidoprincipal {
+    background-color: var(--color1);
+}
+
+nav {
+    display: flex;
+}
+
+nav ul li:hover {
+    background-color: var(--color2);
+}
+
+.h1>{
+    display: block;
+}
+
+.h1__span--primero {
+    font-size: xx-large;
+    color: var(--color1);
+}
+
+.h1__span--segundo {
+    font-size: x-large;
+    color: var(--color2);
+}
+
+.contenedorseccion__tituloseccion {
+    width: var(--anchotituloseccion);
+    color: var(--color1);
+    padding: var(--paddinggrande);
+    background-image: linear-gradient(black, lightgrey);
+}
+
+h2 {
+    font-size: var(--fontmediana);
+}
+
+h3 {
+    font-size: var(--fontgrande);
+}
+
+.quienessomos__integrantesbl__contenedor {
+    display: flex;
+    width: 60vw;
+}
+
+.integrantesbl__card {
+    width: 20vw;
+    height: 30vw;
+    margin: var(--margenesdentrodeseccion);
+}
+
+.integrantesbl__card> {
+    display: none;
+}
+
+h4 {
+    font-size: var(--fontmediana);
+    color: var(--color0);
+}
+
+.galeria__fotos__contenedor {
+    display: flex;
+}
+
+.galeria__fotos__contenedor> {
+    margin: var(--margenentresecciones);
+    width: 12.5vw;
+    height: 12.5vw;
+}
+
+.galeria__fotos__contenedor>:hover {
+    transform: scale(1.1);
+}
+
+.galeria__vidoes__contenedor {
+    display: flex;
+}
+
+.formulariocontacto__contenedor {
+    background-color: var(--color3);
+    padding: var(--paddinggrande);
+}
+
+footer {
+    height: 100px;
+    background-color: var(--color0);
+}
