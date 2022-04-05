@@ -68,7 +68,7 @@ nav ul li:hover {
     width: var(--anchotituloseccion);
     color: var(--color1);
     padding: var(--paddinggrande);
-    background-image: linear-gradient(black, lightgrey);
+    background-image: linear-gradient(var(--color0), var(--color3));
 }
 
 h2 {
