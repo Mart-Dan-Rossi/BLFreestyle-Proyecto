@@ -41,16 +41,6 @@ main>div{
 
 }
 
-.quienessomos__contenedor .contenedorseccion__tituloseccion {
-    height: 100px;
-    /* background-image: ; */
-}
-
-.contenedorseccion__contenidoprincipal {
-    background-color: var(--color1);
-    text-align: center;
-}
-
 nav {
     display: flex;
     justify-content: flex-end;
@@ -64,25 +54,19 @@ nav ul li:hover {
     background-color: var(--color2);
 }
 
-.h1>{
+.h1__span {
     display: block;
+    text-align: left;
 }
 
-.h1__span--primero {
+.h1__span.primero {
     font-size: xx-large;
     color: var(--color1);
 }
 
-.h1__span--segundo {
+.h1__span.segundo {
     font-size: x-large;
     color: var(--color2);
-}
-
-.contenedorseccion__tituloseccion {
-    width: var(--anchotituloseccion);
-    color: var(--color1);
-    padding: var(--paddinggrande);
-    background-image: linear-gradient(to right, var(--color0), var(--color3));
 }
 
 h2 {
@@ -91,6 +75,28 @@ h2 {
 
 h3 {
     font-size: var(--fontgrande);
+}
+
+h4 {
+    font-size: var(--fontmediana);
+    color: var(--color0);
+}
+
+.quienessomos__contenedor .contenedorseccion__tituloseccion {
+    height: 100px;
+    /* background-image: ; */
+}
+
+.contenedorseccion__contenidoprincipal {
+    background-color: var(--color1);
+    text-align: center;
+}
+
+.contenedorseccion__tituloseccion, .h1__span {
+    width: var(--anchotituloseccion);
+    color: var(--color1);
+    padding: var(--paddinggrande);
+    background-image: linear-gradient(to right, var(--color0), var(--color3));
 }
 
 .quienessomos__integrantesbl__contenedor {
@@ -113,11 +119,6 @@ h3 {
 
 .integrantesbl__card> {
     display: none;
-}
-
-h4 {
-    font-size: var(--fontmediana);
-    color: var(--color0);
 }
 
 .galeria__fotos__contenedor {
