@@ -178,7 +178,7 @@ h3 {
     font-size: var(--fontgrande);
 }
 
-h4 {
+h4, .tituloIntegrante {
     font-size: var(--fontmediana);
     color: var(--color0);
 }
@@ -203,10 +203,6 @@ h4 {
 .integrantesbl__card {
     width: 20vw;
     height: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     background-image: url(https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80);
     background-size: cover;
     background-position: center;
@@ -214,18 +210,31 @@ h4 {
     transition: all 0.4s ease-in-out;
 }
 
+.tituloIntegrante {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.integrantesbl__card--contenido {
+    width: 20vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+}
+
 .integrantesbl__card:hover {
-    filter: grayscale(1);
     box-shadow: 15px 13px 33px -4px rgba(0,0,0,0.4);
 }
 
-.integrantesbl__card > a {
-    visibility: hidden;
+.integrantesbl__card--contenido:hover {
+    transition: opacity 2s;  
+    opacity: 1;
 }
 
-.integrantesbl__card:hover a {
-    visibility: visible;
-}
 /* ===== FIN QUIENES SOMOS ====== */
 
 
