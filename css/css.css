@@ -202,38 +202,60 @@ h4, .tituloIntegrante {
 /* Template para las cards */
 .integrantesbl__card {
     width: 20vw;
-    height: 30vw;
-    background-image: url(https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 25vw;
+    position: relative;
     transition: all 0.4s ease-in-out;
-}
-
-.tituloIntegrante {
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.76);
-}
-
-.integrantesbl__card--contenido {
-    width: 20vw;
-    height: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    opacity: 0;
+    overflow: hidden;
 }
 
 .integrantesbl__card:hover {
     box-shadow: 15px 13px 33px -4px rgba(0,0,0,0.4);
 }
 
-.integrantesbl__card--contenido:hover {
-    transition: opacity 2s;  
-    opacity: 1;
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+.tituloIntegrante {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color1);
+    text-align: center;
+    background-color: var(--color2);
+    width: 100%;
+    padding-block: 0.5rem;
+}
+
+.tituloIntegrante small {
+    display: block;
+}
+
+.integrantesbl__card--contenido .card__icon {
+    font-size: 4.5rem;
+    color: var(--color1);
+}
+
+.integrantesbl__card--contenido {
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(42, 43, 43, 0.6);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   transform: translateX(-100%);
+   transition: all 0.7s ease-in-out;
+}
+
+.integrantesbl__card:hover .integrantesbl__card--contenido{
+   transform: translateX(0);
+}
+
 
 /* ===== FIN QUIENES SOMOS ====== */
 
@@ -327,7 +349,7 @@ h4, .tituloIntegrante {
 
 
 footer {
-    height: 100px;
+    padding: 2rem;
     background-color: var(--color0);
 }
 
@@ -342,9 +364,16 @@ footer h4 {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    column-gap: 2rem;
+    margin-top: 1.3rem;
 }
 
-footer img {
-    height: 30px;
-    margin: 5px;
+.fa-brands {
+    font-size: 1.8rem;
+    color: var(--color1);
+    transition: transform 0.4s ease;
+}
+
+.fa-brands:hover {
+    transform: scale(1.2);
 }
