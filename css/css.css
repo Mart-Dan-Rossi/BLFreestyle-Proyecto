@@ -292,6 +292,25 @@ h4, .tituloIntegrante {
     margin: 20px;
 }
 /* ======== FIN GALERÍA ======= */
+
+
+
+/* ======== EVENTOS ======= */
+#eventos .contenedorseccion__contenidoprincipal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+
+iframe {
+    margin: 10px;
+    width: 45%;
+    height: 30vw;
+    min-width: 600px;
+}
+
+
+/* ======== FIN EVENTOS ======= */
 .contenedorseccion__contenidoprincipal--contacto {
     margin-bottom: 2rem;
 }
