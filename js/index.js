@@ -1,6 +1,6 @@
 const integrantesJSON = "../editar/integrantes.json";
-const fotosJSON = "../editar/fotos.json";
-const videosJSON = "../editar/videos.json";
+const fotosJSON = "../editar/galeriaFotos.json";
+const videosJSON = "../editar/galeriaVideos.json";
 
 const galeriaVideos = document.querySelector(".galeria__vidoes__contenedor");
 const contenedorIntegrantes = document.querySelector('.quienessomos__integrantesbl__contenedor');
