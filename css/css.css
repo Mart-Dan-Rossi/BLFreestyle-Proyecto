@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100;900&display=swap');
 
 :root {
     scroll-behavior: smooth;
@@ -6,6 +8,7 @@
     --color0:#000;
     --color1: #fff;
     --color3: lightgrey;
+    --color4: rgba(176, 176, 176, 1);
     --main-color: #F8C643;
     /* --body-bg-color: #E5E5E5; */
     --body-bg-color: #fff;
@@ -55,6 +58,7 @@ header {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    height: 64px;
 }
 
 .navbar__links a {
@@ -62,10 +66,11 @@ header {
     font-weight: 600;
     font-size: 1.125rem;
     display: inline-block;
-    padding: 0.8rem 1.5rem;
+    padding: 1.3rem 1.5rem;
     text-decoration: none;
     color: var(--color0);
     transition: background-color 0.4s ease-in-out;
+    height: 100%;
 }
 
 .navbar__links a:hover {
@@ -157,6 +162,7 @@ main {
 }
 
 .subtitulo {
+    font-family: 'Roboto', sans-serif;
     font-size: 3.4375rem;
     font-weight: 100;
     position: relative;
@@ -164,15 +170,24 @@ main {
     padding-block: 2rem;
     color: var(--color1);
     z-index: 100;
+    font-style: normal;
+    line-height: 64px;
 }
 
 .subtitulo span {
     display: block;
-    font-size: 4.5rem;
-    font-weight: 700;
+    font-style: normal;
+    font-weight: 700;    
+    font-size: 3.2rem;
+    line-height: 56px;
 }
 
-
+#eventos h2 span, #galeria h2 span, #quienes-somos h2 span {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 84px;
+    letter-spacing: 0em;
+}
 
 h2 {
     font-size: var(--fontmediana);
@@ -194,16 +209,22 @@ h4, .tituloIntegrante {
 }
 
 .contenedorseccion__contenidoprincipal p {
-    /* font-size: 1.25rem; */
-    font-size: 1.125rem;
-    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0em;    
+    font-family: 'Inter', sans-serif;
+}
+
+.contenedorseccion__contenidoprincipal p span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 }
 
 /* ======= QUIENES SOMOS ======== */
 .quienessomos__integrantesbl__contenedor {
     margin: 3rem auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
     justify-items: center;
     gap: 1.5rem;
 }
@@ -342,7 +363,7 @@ h4, .tituloIntegrante {
 }
 
 .formulariocontacto__contenedor {
-    width: 70%;
+    width: 100%;
     margin-inline: auto;
     background-color: var(--color3);
     padding: 5rem 2rem;
@@ -357,6 +378,13 @@ h4, .tituloIntegrante {
     margin-bottom: 1.5rem;
 }
 
+.formulariocontacto__texto p {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -369,8 +397,10 @@ h4, .tituloIntegrante {
 }
 
 .form label {
-    font-weight: bold;
-    margin-bottom: var(--paddingmedio);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
 }
 
 .form input, .form textarea {
@@ -387,7 +417,8 @@ h4, .tituloIntegrante {
 }
 
 .form button {
-    font-weight: bold;
+    height: 58.720001220703125px;
+    width: 215.67999267578125px;
     align-self: center;
     padding: 0.7rem 3.5rem;
     border: none;
@@ -395,6 +426,10 @@ h4, .tituloIntegrante {
     background-color: #E7B840;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
 }
 
 .form button:hover {
@@ -408,12 +443,6 @@ footer {
     background-color: var(--color0);
 }
 
-footer h4 {
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-}
-
 .contenedor__redes {    
     display: flex;
     flex-wrap: nowrap;
@@ -423,12 +452,37 @@ footer h4 {
     margin-top: 1.3rem;
 }
 
+.contenedor__redes a {
+    height: 62.63227081298828px;
+    width: 62.59136199951172px;
+    left: 613px;
+    top: 5645.4609375px;
+    border-radius: 0px;
+    background: linear-gradient(0deg, #FCFCFC 2.26%, #E6E6E6 129.83%);
+    border-radius: 100%;
+}
+
+footer i {
+    transform: translate(17px, 15px);
+}
+
+.fa-youtube {
+    transform: translate(13px, 15px);
+}
+
+.fa-twitch {
+    transform: translate(15px, 15px);
+}
+
 .fa-brands {
-    font-size: 1.8rem;
-    color: var(--color1);
+    font-size: 2rem;
+    color: var(--color4);
+}
+
+footer a {
     transition: transform 0.4s ease;
 }
 
-.fa-brands:hover {
+footer a:hover {
     transform: scale(1.2);
 }
