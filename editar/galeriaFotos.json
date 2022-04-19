@@ -1,25 +1,41 @@
 [
     {
-        "linkFoto": "https://www.diariolamanana.com.ar/wp-content/uploads/2022/01/bl.jpg"
+        "linkFoto": "../public/images/galeria/galeria1.png"
     },
 
     {
-        "linkFoto": "https://www.diariolamanana.com.ar/wp-content/uploads/2022/01/bl.jpg"
+        "linkFoto": "../public/images/galeria/galeria2.png"
     },
 
     {
-        "linkFoto": "https://www.diariolamanana.com.ar/wp-content/uploads/2022/01/bl.jpg"
+        "linkFoto": "../public/images/galeria/galeria3.png"
     },
 
     {
-        "linkFoto": "https://www.diariolamanana.com.ar/wp-content/uploads/2022/01/bl.jpg"
+        "linkFoto": "../public/images/galeria/galeria4.png"
     },
 
     {
-        "linkFoto": "https://www.diariolamanana.com.ar/wp-content/uploads/2022/01/bl.jpg"
+        "linkFoto": "../public/images/galeria/galeria5.png"
     },
 
     {
-        "linkFoto": "https://www.diariolamanana.com.ar/wp-content/uploads/2022/01/bl.jpg"
+        "linkFoto": "../public/images/galeria/galeria6.png"
+    },
+
+    {
+        "linkFoto": "../public/images/galeria/galeria7.png"
+    },
+
+    {
+        "linkFoto": "../public/images/galeria/galeria8.png"
+    },
+
+    {
+        "linkFoto": "../public/images/galeria/galeria9.png"
+    },
+
+    {
+        "linkFoto": "../public/images/galeria/galeria10.png"
     }
 ]

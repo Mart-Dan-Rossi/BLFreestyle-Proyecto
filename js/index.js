@@ -50,7 +50,7 @@ const renderizarFotos = (fotos) => {
         galeriaFotos.innerHTML += `
             <img
                 src= ${linkFoto}
-            alt="Imágen prueba"
+            alt="Evento de BL Freestyle"
             />    
         `;
     });
