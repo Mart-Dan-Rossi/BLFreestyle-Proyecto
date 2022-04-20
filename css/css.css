@@ -35,6 +35,7 @@ body {
     font-family: var(--body-font);
     background-color: var(--body-bg-color);
     overflow-x: hidden;
+    position: relative;
 }
 
 /* ======= Navbar ======= */
@@ -224,7 +225,7 @@ h4, .tituloIntegrante {
 .quienessomos__integrantesbl__contenedor {
     margin: 3rem auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: center;
     gap: 1.5rem;
 }
@@ -302,13 +303,14 @@ h4, .tituloIntegrante {
 
 .galeria__fotos__contenedor {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1rem;
 }
 
 .galeria__fotos__contenedor img {
     width: 100%;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .galeria__fotos__contenedor img:hover {
@@ -317,13 +319,15 @@ h4, .tituloIntegrante {
 
 .galeria__vidoes__contenedor {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
     gap: 1.5rem;
     margin-top: 4.5rem;
 }
 
 .galeria__vidoes__contenedor iframe {
     width: 100%;
+    max-width: 600px;
     min-height: 300px;
 }
 
@@ -485,4 +489,46 @@ footer a {
 
 footer a:hover {
     transform: scale(1.2);
+}
+
+/* ======= BODY-OVERLAY ======= */
+.body-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(43, 82%, 20%, 0.85);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.show-body-overlay {
+    visibility: visible;
+}
+
+.img-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80vw;
+    height: 65vh;
+    max-width: 800px;
+    max-height: 600px;
+    box-shadow: 16px 23px 32px -7px rgba(0,0,0,0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fa-xmark {
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    font-size: 1.8rem;
+    color: var(--color1);
+    cursor: pointer;
 }

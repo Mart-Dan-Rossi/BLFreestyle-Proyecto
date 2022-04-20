@@ -6,8 +6,21 @@ const galeriaVideos = document.querySelector(".galeria__vidoes__contenedor");
 const contenedorIntegrantes = document.querySelector('.quienessomos__integrantesbl__contenedor');
 const galeriaFotos = document.querySelector(".galeria__fotos__contenedor");
 const templateIntegrantes = document.getElementById("template-card-integrante").content;
+const bodyOverlay = document.querySelector('.body-overlay');
+const overlayImgContainer = document.querySelector('.img-container');
+let imagenesGaleria;
 
 const fragment = document.createDocumentFragment();
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchIntegrantes();
+    fetchFotos();
+    insertoVideos();
+});
+
+bodyOverlay.addEventListener('click', (e) => {
+    (e.target.classList.contains('body-overlay') || e.target.classList.contains('fa-xmark')) && bodyOverlay.classList.remove('show-body-overlay');
+})
 
 
 const renderizarIntegrantes = (integrantes) => {
@@ -56,6 +69,18 @@ const renderizarFotos = (fotos) => {
     });
 }
 
+// lógica para agrandar fotos de galería al hacer click
+const agrandarImagenes = () => {
+    imagenesGaleria.forEach((img) => {
+        img.addEventListener('click', () => {
+            bodyOverlay.classList.add('show-body-overlay');
+            overlayImgContainer.style.backgroundImage = `url(${img.src})`;
+        });
+    });
+};
+
+
+// RENDERIZACIÓN DE CARDS DE INTEGRANTES
 const fetchIntegrantes = async()=>{
     try{
         const resp = await fetch(integrantesJSON);
@@ -66,16 +91,20 @@ const fetchIntegrantes = async()=>{
     };
 };
 
+// RENDERIZACIÓN DE FOTOS GALERÍA
 const fetchFotos = async() => {
     try{
         const resp = await fetch(fotosJSON);
         const fotos = await resp.json();
         renderizarFotos(fotos);
+        imagenesGaleria = document.querySelectorAll('.galeria__fotos__contenedor img');
+        agrandarImagenes();
     }catch(error) {
         console.log(error);
     }
 }
 
+// RENDERIZACIÓN DE VIDEOS GALERÍA
 const insertoVideos = ()=>{
     //Traigo el JSON de videos
     fetch(videosJSON)
@@ -87,7 +116,3 @@ const insertoVideos = ()=>{
         });
     });
 };
-
-fetchIntegrantes();
-fetchFotos();
-insertoVideos();
