@@ -8,7 +8,9 @@ const galeriaFotos = document.querySelector(".galeria__fotos__contenedor");
 const templateIntegrantes = document.getElementById("template-card-integrante").content;
 const bodyOverlay = document.querySelector('.body-overlay');
 const overlayImgContainer = document.querySelector('.img-container');
-let imagenesGaleria;
+
+let mediaQuery = window.matchMedia('(min-width: 600px)');
+let isDesktop = mediaQuery.matches;
 
 const fragment = document.createDocumentFragment();
 
@@ -16,12 +18,45 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchIntegrantes();
     fetchFotos();
     insertoVideos();
+    controlarEventoImagenes(isDesktop);
 });
+
+
+mediaQuery.addEventListener('change', () => {
+    (mediaQuery.matches) ? (
+        isDesktop = mediaQuery.matches
+    ) : (
+        isDesktop = mediaQuery.matches
+    );
+
+    controlarEventoImagenes(isDesktop);
+});
+
+const controlarEventoImagenes = ( isDesktop ) => {
+    (isDesktop) ? (
+        galeriaFotos.addEventListener('click', agrandarImagenes)
+    ) : (
+        galeriaFotos.removeEventListener('click', agrandarImagenes)
+    );
+};
+
+const prueba = () => { console.log(' Agrandar Imagenes') };
 
 bodyOverlay.addEventListener('click', (e) => {
     (e.target.classList.contains('body-overlay') || e.target.classList.contains('fa-xmark')) && bodyOverlay.classList.remove('show-body-overlay');
-})
+});
 
+// lógica para agrandar fotos de galería al hacer click
+const agrandarImagenes = (e) => {
+
+    if (e.target.classList.contains('galeria-img')) {
+        const imgSrc = e.target.src
+        const imgAlt = e.target.alt
+
+        bodyOverlay.classList.add('show-body-overlay');
+        overlayImgContainer.innerHTML = `<img src="${ imgSrc }" alt="${ imgAlt }">`;
+    }
+};
 
 const renderizarIntegrantes = (integrantes) => {
     
@@ -62,23 +97,13 @@ const renderizarFotos = (fotos) => {
 
         galeriaFotos.innerHTML += `
             <img
+                class = "galeria-img"
                 src= ${linkFoto}
-            alt="Evento de BL Freestyle"
+                alt="Evento de BL Freestyle"
             />    
         `;
     });
 }
-
-// lógica para agrandar fotos de galería al hacer click
-const agrandarImagenes = () => {
-    imagenesGaleria.forEach((img) => {
-        img.addEventListener('click', () => {
-            bodyOverlay.classList.add('show-body-overlay');
-            overlayImgContainer.style.backgroundImage = `url(${img.src})`;
-        });
-    });
-};
-
 
 // RENDERIZACIÓN DE CARDS DE INTEGRANTES
 const fetchIntegrantes = async()=>{
@@ -97,8 +122,6 @@ const fetchFotos = async() => {
         const resp = await fetch(fotosJSON);
         const fotos = await resp.json();
         renderizarFotos(fotos);
-        imagenesGaleria = document.querySelectorAll('.galeria__fotos__contenedor img');
-        agrandarImagenes();
     }catch(error) {
         console.log(error);
     }
