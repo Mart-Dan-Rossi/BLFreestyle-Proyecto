@@ -305,7 +305,7 @@ h4, .tituloIntegrante {
     background-image: url('../public/images/galeria-img.png');
 }
 
-.galeria__fotos__contenedor, .galeria__vidoes__contenedor {
+.galeria__fotos__contenedor, .galeria__videos__contenedor {
     margin: 1rem 0 2.5rem;
 }
 
@@ -327,18 +327,18 @@ h4, .tituloIntegrante {
     transform: scale(1.03);
 }
 
-.galeria__vidoes__contenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    justify-items: center;
+.galeria__videos__contenedor {
+    display: flex;
     gap: 1.5rem;
     margin-top: 4.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.galeria__vidoes__contenedor iframe {
-    width: 100%;
-    max-width: 600px;
-    min-height: 300px;
+.galeria__videos__contenedor iframe {
+    min-width: 40%;
+    height: 18vw;
+    min-height: 200px;
 }
 
 /* ======== FIN GALERÍA ======= */

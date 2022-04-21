@@ -2,7 +2,7 @@ const integrantesJSON = "../editar/integrantes.json";
 const fotosJSON = "../editar/galeriaFotos.json";
 const videosJSON = "../editar/galeriaVideos.json";
 
-const galeriaVideos = document.querySelector(".galeria__vidoes__contenedor");
+const galeriaVideos = document.querySelector(".galeria__videos__contenedor");
 const contenedorIntegrantes = document.querySelector('.quienessomos__integrantesbl__contenedor');
 const galeriaFotos = document.querySelector(".galeria__fotos__contenedor");
 const templateIntegrantes = document.getElementById("template-card-integrante").content;
