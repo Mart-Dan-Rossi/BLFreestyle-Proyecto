@@ -2,7 +2,7 @@ const integrantesJSON = "../editar/integrantes.json";
 const fotosJSON = "../editar/galeriaFotos.json";
 const videosJSON = "../editar/galeriaVideos.json";
 
-const galeriaVideos = document.querySelector(".galeria__vidoes__contenedor");
+const galeriaVideos = document.querySelector(".galeria__videos__contenedor");
 const contenedorIntegrantes = document.querySelector('.quienessomos__integrantesbl__contenedor');
 const galeriaFotos = document.querySelector(".galeria__fotos__contenedor");
 const templateIntegrantes = document.getElementById("template-card-integrante").content;
@@ -142,7 +142,7 @@ const insertoVideos = ()=>{
     .then((json)=>{
         //Corro esta función que va a crear e imprimir los elementos iframe en el HTML en el lugar que corresponde
         json.forEach(element => {
-            galeriaVideos.innerHTML+= `<iframe src="${element.iframe}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>`;
+            galeriaVideos.innerHTML += `<iframe src="${element.iframe}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>`;
         });
     });
 };
