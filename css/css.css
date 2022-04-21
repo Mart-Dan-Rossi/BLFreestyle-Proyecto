@@ -21,8 +21,12 @@
     --margenentresecciones: 3px;
     --margenesdentrodeseccion: 5px;
     --anchotituloseccion: 40vw;
-    --fontgrande: xx-large;
-    --fontmediana: x-large;
+    --fontextraextragrande: 4rem;
+    --fontextragrande: 3rem;
+    --fontmuygrande: 2rem;
+    --fontgrande: 1.5rem;
+    --fontunpocomasgrande: 1.125rem;
+    --fontmediana: 1rem;
 }
 
 * {
@@ -36,6 +40,8 @@ body {
     background-color: var(--body-bg-color);
     overflow-x: hidden;
     position: relative;
+    /*IMPORTANTE DE ACÁ SE CALCULAN LOS REM. CAMBIARLO PARA LOS DISTINTOS MEDIA QUERY Y SE CAMBIAN LOS TAMAÑOS DE LA LETRA SÓLOS*/
+    font-size: 20px;
 }
 
 /* ======= Navbar ======= */
@@ -65,7 +71,7 @@ header {
 .navbar__links a {
     font-family: var(--links-font);
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: var(--fontunpocomasgrande);
     display: inline-block;
     padding: 1.3rem 1.5rem;
     text-decoration: none;
@@ -179,7 +185,7 @@ main {
     display: block;
     font-style: normal;
     font-weight: 700;    
-    font-size: 3.2rem;
+    font-size: var(--fontextragrande);
     line-height: 56px;
 }
 
@@ -191,15 +197,15 @@ main {
 }
 
 h2 {
-    font-size: var(--fontmediana);
-}
-
-h3 {
     font-size: var(--fontgrande);
 }
 
+h3 {
+    font-size: var(--fontmuygrande);
+}
+
 h4, .tituloIntegrante {
-    font-size: var(--fontmediana);
+    font-size: var(--fontgrande);
     color: var(--color0);
 }
 
@@ -210,8 +216,8 @@ h4, .tituloIntegrante {
 }
 
 .contenedorseccion__contenidoprincipal p {
-    font-size: 20px;
-    line-height: 23px;
+    font-size: var(--fontmediana);
+    line-height: var(--fontgrande);
     letter-spacing: 0em;    
     font-family: 'Inter', sans-serif;
 }
@@ -226,10 +232,10 @@ h4, .tituloIntegrante {
 /*A HACER cambiar esto para que sea con flex pero cambiando el ancho de las imágenes para que se comporte como flex de forma correcta*/
 .quienessomos__integrantesbl__contenedor {
     margin: 3rem auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    justify-items: center;
+    display: flex;
     gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* .quienessomos__integrantesbl__contenedor {
@@ -240,9 +246,10 @@ h4, .tituloIntegrante {
 
 /* Template para las cards */
 .integrantesbl__card {
-    width: 100%;
-    max-width: 320px;
-    height: 400px;
+    width: 12%;
+    min-width: 137px;
+    height: 35vw;
+    max-height: 350px;
     position: relative;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
@@ -259,7 +266,7 @@ h4, .tituloIntegrante {
 }
 
 .tituloIntegrante {
-    font-size: 1.4rem;
+    font-size: var(--fontgrande);
     font-weight: bold;
     color: var(--color1);
     text-align: center;
@@ -393,7 +400,7 @@ h4, .tituloIntegrante {
 }
 
 .formulariocontacto__texto p {
-    font-size: 24px;
+    font-size: var(--fontunpocomasgrande);
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
@@ -411,7 +418,7 @@ h4, .tituloIntegrante {
 }
 
 .form label {
-    font-size: 24px;
+    font-size: var(--fontmediana);
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
@@ -419,7 +426,7 @@ h4, .tituloIntegrante {
 
 .form input, .form textarea {
     font-family: inherit;
-    font-size: 1rem;
+    font-size: var(--fontmediana);
     border: none;
     outline: none;
     border-radius: 5px;
@@ -431,8 +438,8 @@ h4, .tituloIntegrante {
 }
 
 .form button {
-    height: 58.720001220703125px;
-    width: 215.67999267578125px;
+    height: 3.5rem;
+    width: 15rem;
     align-self: center;
     padding: 0.7rem 3.5rem;
     border: none;
@@ -440,7 +447,7 @@ h4, .tituloIntegrante {
     background-color: #E7B840;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    font-size: 24px;
+    font-size: var(--fontunpocomasgrande);
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
@@ -478,7 +485,7 @@ footer {
 }
 
 .fa-brands {
-    font-size: 1.5rem;
+    font-size: var(--fontgrande);
     color: var(--color4);
 }
 
