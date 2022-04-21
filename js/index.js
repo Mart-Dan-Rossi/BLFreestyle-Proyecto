@@ -2,7 +2,7 @@ const integrantesJSON = "../editar/integrantes.json";
 const fotosJSON = "../editar/galeriaFotos.json";
 const videosJSON = "../editar/galeriaVideos.json";
 
-const galeriaVideos = document.querySelector(".galeria__videos__contenedor");
+const galeriaVideos = document.querySelector(".galeria__vidoes__contenedor");
 const contenedorIntegrantes = document.querySelector('.quienessomos__integrantesbl__contenedor');
 const galeriaFotos = document.querySelector(".galeria__fotos__contenedor");
 const templateIntegrantes = document.getElementById("template-card-integrante").content;
@@ -59,7 +59,8 @@ const agrandarImagenes = (e) => {
 };
 
 const renderizarIntegrantes = (integrantes) => {
-    
+    let linkFotoPorDefecto = "./public/images/bl-logo.png"
+
     integrantes.forEach((integrante) => {
         const {
             nombreCompleto,
@@ -70,8 +71,14 @@ const renderizarIntegrantes = (integrantes) => {
 
         const clone = templateIntegrantes.cloneNode(true);
 
-        clone.querySelector('.card__img').src = linkFoto;
-        clone.querySelector('.card__img').alt = nombreCompleto;
+        if (linkFoto == ""){
+            clone.querySelector('.card__img').src = linkFotoPorDefecto;
+            clone.querySelector('.card__img').style = "object-fit: scale-down"
+        }
+        else {
+            clone.querySelector('.card__img').src = linkFoto;
+        }
+        clone.querySelector('.card__img').alt = `Foto de ${nombreCompleto}`;
         (rolTrabajo) ? (
             clone.querySelector('.tituloIntegrante').innerHTML = `
                 ${ nombreCompleto }
