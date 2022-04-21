@@ -9,7 +9,7 @@ const templateIntegrantes = document.getElementById("template-card-integrante").
 const bodyOverlay = document.querySelector('.body-overlay');
 const overlayImgContainer = document.querySelector('.img-container');
 
-let mediaQuery = window.matchMedia('(min-width: 600px)');
+let mediaQuery = window.matchMedia('(min-width: 770px)');
 let isDesktop = mediaQuery.matches;
 
 const fragment = document.createDocumentFragment();
