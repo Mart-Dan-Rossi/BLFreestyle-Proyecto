@@ -222,6 +222,8 @@ h4, .tituloIntegrante {
 }
 
 /* ======= QUIENES SOMOS ======== */
+
+/*A HACER cambiar esto para que sea con flex pero cambiando el ancho de las imágenes para que se comporte como flex de forma correcta*/
 .quienessomos__integrantesbl__contenedor {
     margin: 3rem auto;
     display: grid;
@@ -229,6 +231,12 @@ h4, .tituloIntegrante {
     justify-items: center;
     gap: 1.5rem;
 }
+
+/* .quienessomos__integrantesbl__contenedor {
+    margin: 3rem auto;
+    display: flex;
+    gap: 1.5rem;
+} */
 
 /* Template para las cards */
 .integrantesbl__card {
@@ -302,16 +310,18 @@ h4, .tituloIntegrante {
 }
 
 .galeria__fotos__contenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .galeria__fotos__contenedor img {
-    width: 100%;
+    width: 300px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
+
 
 .galeria__fotos__contenedor img:hover {
     transform: scale(1.03);
@@ -487,7 +497,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #5d4509d9;
+    background-color: #00000094;
     display: flex;
     justify-content: center;
     visibility: hidden;
