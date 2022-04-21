@@ -457,29 +457,18 @@ footer {
 }
 
 .contenedor__redes a {
-    height: 62.63227081298828px;
-    width: 62.59136199951172px;
-    left: 613px;
-    top: 5645.4609375px;
-    border-radius: 0px;
+    display: grid;
+    place-content: center;
+    width: 2.8rem;
+    padding: 10px;
+    aspect-ratio: 1;
     background: linear-gradient(0deg, #FCFCFC 2.26%, #E6E6E6 129.83%);
     border-radius: 100%;
-}
-
-footer i {
-    transform: translate(17px, 15px);
-}
-
-.fa-youtube {
-    transform: translate(13px, 15px);
-}
-
-.fa-twitch {
-    transform: translate(15px, 15px);
+    text-decoration: none;
 }
 
 .fa-brands {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color4);
 }
 
