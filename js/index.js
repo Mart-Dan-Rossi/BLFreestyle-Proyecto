@@ -20,78 +20,93 @@ const menuMediaQuery = window.matchMedia('(max-width: 832px)');
 
 const fragment = document.createDocumentFragment();
 
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchIntegrantes();
     fetchFotos();
     insertoVideos();
-    controlarEventoImagenes(isDesktop);
+    galeriaFotos.addEventListener('click', agrandarImagenes)
+    bodyOverlay.addEventListener('click', escondoOverleyImagen)
+    if (!isDesktop) {
+        overlayImgContainer.querySelector("img").addEventListener('click', escondoOverleyImagen)
+    }
 });
 
 
 mediaQuery.addEventListener('change', () => {
-    (mediaQuery.matches) ? (
-        isDesktop = mediaQuery.matches
-    ) : (
-        isDesktop = mediaQuery.matches
-    );
-
-    controlarEventoImagenes(isDesktop);
+    controlarEventoImagenes();
 });
 
-menuMediaQuery.addEventListener('change', () => {
-    if(menuMediaQuery.matches) {
-        controlarMenu();
-    };
-});
-
-burgerButton.addEventListener('click', () => {
-    controlarMenu();
-});
-
-linkList.forEach((link) => {
-    link.addEventListener('click', () => {
-        controlarMenu();
-    });
-});
-
-
-const controlarMenu = () => {
-    (menuIsOpen) ? (
-        navbarLinks.classList.remove('show-navbar__links'),
-        burgerButton.classList.remove('burger-button--toggle')
-    ) : (
-        navbarLinks.classList.add('show-navbar__links'),
-        burgerButton.classList.add('burger-button--toggle')
-    )
-
-    menuIsOpen = !menuIsOpen;
+const controlarEventoImagenes = () => {
+    galeriaFotos.removeEventListener('click', agrandarImagenes)
+    galeriaFotos.addEventListener('click', agrandarImagenes)
 };
-
-const controlarEventoImagenes = ( isDesktop ) => {
-    (isDesktop) ? (
-        galeriaFotos.addEventListener('click', agrandarImagenes)
-    ) : (
-        galeriaFotos.removeEventListener('click', agrandarImagenes)
-    );
-};
-
-const prueba = () => { console.log(' Agrandar Imagenes') };
-
-bodyOverlay.addEventListener('click', (e) => {
-    (e.target.classList.contains('body-overlay') || e.target.classList.contains('fa-xmark')) && bodyOverlay.classList.remove('show-body-overlay');
-});
 
 // lógica para agrandar fotos de galería al hacer click
 const agrandarImagenes = (e) => {
-
-    if (e.target.classList.contains('galeria-img')) {
+    if (e.target.classList.contains("galeria-img")){
         const imgSrc = e.target.src
         const imgAlt = e.target.alt
-
+    
         bodyOverlay.classList.add('show-body-overlay');
-        overlayImgContainer.innerHTML = `<img src="${ imgSrc }" alt="${ imgAlt }">`;
+        overlayImgContainer.querySelector("img").src=imgSrc
+        overlayImgContainer.querySelector("img").alt=imgAlt
+        if (isDesktop) {
+            overlayImgContainer.classList.add("big-screen")
+            overlayImgContainer.classList.remove("small-screen")
+        } else {
+            overlayImgContainer.classList.remove("big-screen")
+            overlayImgContainer.classList.add("small-screen")
+        }
     }
 };
+
+
+
+const escondoOverleyImagen = (e) => {
+    (e.target.classList.contains('body-overlay') || e.target == overlayImgContainer.querySelector("img") || e.target.classList.contains('fa-xmark')) && bodyOverlay.classList.remove('show-body-overlay');
+    overlayImgContainer.querySelector("img").src="#";
+    overlayImgContainer.querySelector("img").alt="espacio para rellenar con una imágen";
+};
+// document.addEventListener('DOMContentLoaded', () => {
+//     fetchIntegrantes();
+//     fetchFotos();
+//     insertoVideos();
+//     controlarEventoImagenes(isDesktop);
+// });
+
+
+// mediaQuery.addEventListener('change', () => {
+//     (mediaQuery.matches) ? (
+//         isDesktop = mediaQuery.matches
+//     ) : (
+//         isDesktop = mediaQuery.matches
+//     );
+
+//     controlarEventoImagenes(isDesktop);
+// });
+
+// const controlarEventoImagenes = ( isDesktop ) => {
+//     (isDesktop) ? (
+//         galeriaFotos.addEventListener('click', agrandarImagenes)
+//     ) : (
+//         galeriaFotos.removeEventListener('click', agrandarImagenes)
+//     );
+// };
+
+
+
+// // lógica para agrandar fotos de galería al hacer click
+// const agrandarImagenes = (e) => {
+
+//     if (e.target.classList.contains('galeria-img')) {
+//         const imgSrc = e.target.src
+//         const imgAlt = e.target.alt
+
+//         bodyOverlay.classList.add('show-body-overlay');
+//         overlayImgContainer.innerHTML = `<img src="${ imgSrc }" alt="${ imgAlt }">`;
+//     }
+// };
 
 const renderizarIntegrantes = (integrantes) => {
     let linkFotoPorDefecto = "./public/images/bl-logo.png"

@@ -542,20 +542,25 @@ footer a:hover {
 }
 
 .img-container {
+    z-index: 100;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 90vw;
-    height: 65vh;
-    max-width: 800px;
-    max-height: 600px;
-    box-shadow: 16px 23px 32px -7px rgba(0,0,0,0.5);
+    box-shadow: 16px 23px 32px -7px rgb(0 0 0 / 50%);
 }
 
 .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.big-screen {
+    width: 80vw;
+}
+
+.small-screen {
+    width: 100vw;
 }
 
 .fa-xmark {
