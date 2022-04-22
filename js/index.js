@@ -8,9 +8,15 @@ const galeriaFotos = document.querySelector(".galeria__fotos__contenedor");
 const templateIntegrantes = document.getElementById("template-card-integrante").content;
 const bodyOverlay = document.querySelector('.body-overlay');
 const overlayImgContainer = document.querySelector('.img-container');
+const navbarLinks = document.querySelector('.navbar__links');
+const linkList = document.querySelectorAll('.navbar__links li a');
+const burgerButton = document.querySelector('.burger-button');
+let menuIsOpen = false;
 
 let mediaQuery = window.matchMedia('(min-width: 770px)');
 let isDesktop = mediaQuery.matches;
+
+const menuMediaQuery = window.matchMedia('(max-width: 832px)');
 
 const fragment = document.createDocumentFragment();
 
@@ -31,6 +37,35 @@ mediaQuery.addEventListener('change', () => {
 
     controlarEventoImagenes(isDesktop);
 });
+
+menuMediaQuery.addEventListener('change', () => {
+    if(menuMediaQuery.matches) {
+        controlarMenu();
+    };
+});
+
+burgerButton.addEventListener('click', () => {
+    controlarMenu();
+});
+
+linkList.forEach((link) => {
+    link.addEventListener('click', () => {
+        controlarMenu();
+    });
+});
+
+
+const controlarMenu = () => {
+    (menuIsOpen) ? (
+        navbarLinks.classList.remove('show-navbar__links'),
+        burgerButton.classList.remove('burger-button--toggle')
+    ) : (
+        navbarLinks.classList.add('show-navbar__links'),
+        burgerButton.classList.add('burger-button--toggle')
+    )
+
+    menuIsOpen = !menuIsOpen;
+};
 
 const controlarEventoImagenes = ( isDesktop ) => {
     (isDesktop) ? (
