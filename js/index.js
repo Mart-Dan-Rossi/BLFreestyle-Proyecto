@@ -58,9 +58,13 @@ const agrandarImagenes = (e) => {
 
 
 const escondoOverleyImagen = (e) => {
-    (e.target.classList.contains('body-overlay') || e.target == overlayImgContainer.querySelector("img") || e.target.classList.contains('fa-xmark')) && bodyOverlay.classList.remove('show-body-overlay');
-    overlayImgContainer.querySelector("img").src="#";
-    overlayImgContainer.querySelector("img").alt="espacio para rellenar con una imágen";
+    if (isDesktop){
+        (e.target.classList.contains('body-overlay') || e.target.classList.contains('fa-xmark')) && bodyOverlay.classList.remove('show-body-overlay');
+    } else if (!isDesktop) {
+        (e.target.classList.contains('body-overlay') || e.target == overlayImgContainer.querySelector("img") || e.target.classList.contains('fa-xmark')) && bodyOverlay.classList.remove('show-body-overlay');
+        overlayImgContainer.querySelector("img").src="#";
+        overlayImgContainer.querySelector("img").alt="espacio para rellenar con una imágen";
+    }
 };
 // document.addEventListener('DOMContentLoaded', () => {
 //     fetchIntegrantes();
