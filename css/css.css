@@ -492,10 +492,11 @@ footer {
 
 .contenedor__redes {    
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 2rem;
+    column-gap: 2.2rem;
+    row-gap: 1rem;
     margin-top: 1.3rem;
 }
 
@@ -637,12 +638,13 @@ footer a:hover {
     }
 }
 
-@media (max-width: 599px) {
-    .iconoHamburguesa {
-        display: inline-block;
-        height: 50px;
+@media screen and (max-width: 600px) {
+    .navbar__links{
+        width: 100%;
     }
+}
 
+@media (max-width: 599px) {
     .calendario__formato--mes {
         display: none;
     }
@@ -652,8 +654,38 @@ footer a:hover {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .navbar__links{
-        width: 100%;
+@media screen and (max-width: 500px) {
+    .contenedorseccion__tituloseccion {
+        height: 13.8rem;
+    }
+
+    .subtitulo {
+        font-size: 2.4rem;
+        margin: 0;
+        margin-left: 2rem;
+    }
+    
+    #eventos h2 span, #galeria h2 span, #quienes-somos h2 span {
+        font-size: 3.5rem;
+    }
+
+    .subtitulo span {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .subtitulo {
+        font-size: 2.1rem;
+        margin: 0;
+        margin-left: 1.3rem;
+    }
+    
+    #eventos h2 span, #galeria h2 span, #quienes-somos h2 span {
+        font-size: 3.2rem;
+    }
+
+    .subtitulo span {
+        font-size: 2.1rem;
     }
 }
