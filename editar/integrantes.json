@@ -3,49 +3,49 @@
         "nombreCompleto" : "Francisco Langge",
         "rolTrabajo" : "Director General",
         "instagram" : "https://www.instagram.com/franlangge/",
-        "linkFoto" : ""    
+        "linkFoto" : "./recursos/Francisco_Langge.jpg"    
     },
 
     {
         "nombreCompleto" : "Joaquin Galocha",
         "rolTrabajo" : "Director de Marketing",
         "instagram" : "https://www.instagram.com/joaquingalocha/",
-        "linkFoto" : "https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+        "linkFoto" : "./recursos/Joaquin_Galocha.jpg"
     },
 
     {
         "nombreCompleto" : "Homero Santa Maria",
         "rolTrabajo" : "DJ/Producer",
         "instagram" : "https://www.instagram.com/homer_sms/",
-        "linkFoto" : "https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+        "linkFoto" : "./recursos/Homero_Santa_Maria.jpg"
     },
 
     {
         "nombreCompleto" : "Aitana Campos",
         "rolTrabajo" : "Asistente de Producción",
         "instagram" : "https://www.instagram.com/aiticampos/",
-        "linkFoto" : "https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+        "linkFoto" : "./recursos/Aitana_Campos.jpg"
     },
 
     {
         "nombreCompleto" : "Marco Lanzoni",
         "rolTrabajo" : "Audiovisual",
         "instagram" : "https://www.instagram.com/marcolanzonilarra/",
-        "linkFoto" : "https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+        "linkFoto" : "./recursos/Marco_Lanzoni_Larra.jpg"
     },
 
 
     {
-        "nombreCompleto" : "Octavio Hidal",
+        "nombreCompleto" : "Octavio Hidalgo",
         "rolTrabajo" : "",
         "instagram" : "https://www.instagram.com/octahidalgo/",
-        "linkFoto" : "https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+        "linkFoto" : "./recursos/Octavio_Hidalgo.jpg"
     },
 
     {
         "nombreCompleto" : "Siro Prieto",
         "rolTrabajo" : "Comercial",
         "instagram" : "https://www.instagram.com/siro.prieto/",
-        "linkFoto" : "https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+        "linkFoto" : "./recursos/Siro_Prieto.jpg"
     }
 ]

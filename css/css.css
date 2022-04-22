@@ -357,6 +357,10 @@ h4, .tituloIntegrante {
     background-image: url('../public/images/eventos-img.png');
 }
 
+.calendario__formato--agenda {
+    display: none;
+}
+
 #eventos .contenedorseccion__contenidoprincipal {
     width: 90%;
     margin: 0 auto;
