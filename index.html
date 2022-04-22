@@ -185,20 +185,27 @@
               </p>
             </div>
 
-            <form class="form">
+            <!-- **** CAMBIAR EMAIL **** -->
+            <form
+              class="form"
+              action="https://formsubmit.co/alevizcarrapena@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="Nuevo email!" />
+
               <div>
                 <label for="name">Nombre y Apellido:</label>
-                <input type="text" required />
+                <input id="name" type="text" name="nombre" required />
               </div>
 
               <div>
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" />
+                <input type="tel" name="teléfono" />
               </div>
 
               <div>
                 <label for="email">Email</label>
-                <input id="email" type="email" required />
+                <input id="email" type="email" name="email" required />
               </div>
 
               <div>
@@ -207,6 +214,7 @@
                   name="mensaje"
                   id="mensaje"
                   rows="7"
+                  name="mensaje"
                   required
                 ></textarea>
               </div>
