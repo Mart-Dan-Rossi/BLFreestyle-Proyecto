@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100;900&display=swap');
+html {    
+    /*IMPORTANTE DE ACÁ SE CALCULAN LOS REM. CAMBIARLO PARA LOS DISTINTOS MEDIA QUERY Y SE CAMBIAN LOS TAMAÑOS DE LA LETRA SÓLOS*/
+    font-size: 18px;
+}
 
 :root {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
 
     --color0:#000;
     --color1: #fff;
@@ -40,8 +44,7 @@ body {
     background-color: var(--body-bg-color);
     overflow-x: hidden;
     position: relative;
-    /*IMPORTANTE DE ACÁ SE CALCULAN LOS REM. CAMBIARLO PARA LOS DISTINTOS MEDIA QUERY Y SE CAMBIAN LOS TAMAÑOS DE LA LETRA SÓLOS*/
-    font-size: 20px;
+    font-size: var(--fontmediana);
 }
 
 /* ======= Navbar ======= */
@@ -52,6 +55,10 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.iconoHamburguesa {
+    display: none;
 }
 
 .navbar{
@@ -66,12 +73,14 @@ header {
     display: flex;
     justify-content: space-between;
     height: 64px;
+    align-items: center;
 }
 
 .navbar__links a {
     font-family: var(--links-font);
     font-weight: 600;
     font-size: var(--fontunpocomasgrande);
+    text-align: center;
     display: inline-block;
     padding: 1.3rem 1.5rem;
     text-decoration: none;
@@ -543,4 +552,29 @@ footer a:hover {
     font-size: 1.8rem;
     color: var(--color1);
     cursor: pointer;
+}
+
+
+/* ============== MEDIA QUERY ============== */
+@media screen and (min-width: 600px) and (max-width: 730px) {
+    html {    
+        /*IMPORTANTE DE ACÁ SE CALCULAN LOS REM. CAMBIARLO PARA LOS DISTINTOS MEDIA QUERY Y SE CAMBIAN LOS TAMAÑOS DE LA LETRA SÓLOS*/
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 599px) {
+    .iconoHamburguesa {
+        display: inline-block;
+        height: 50px;
+    }
+
+    .calendario__formato--mes {
+        display: none;
+    }
+    
+    .calendario__formato--agenda {
+        display: block;
+    }
+    
 }
