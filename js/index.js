@@ -102,45 +102,7 @@ const escondoOverleyImagen = (e) => {
         overlayImgContainer.querySelector("img").alt="espacio para rellenar con una imágen";
     }
 };
-// document.addEventListener('DOMContentLoaded', () => {
-//     fetchIntegrantes();
-//     fetchFotos();
-//     insertoVideos();
-//     controlarEventoImagenes(isDesktop);
-// });
 
-
-// mediaQuery.addEventListener('change', () => {
-//     (mediaQuery.matches) ? (
-//         isDesktop = mediaQuery.matches
-//     ) : (
-//         isDesktop = mediaQuery.matches
-//     );
-
-//     controlarEventoImagenes(isDesktop);
-// });
-
-// const controlarEventoImagenes = ( isDesktop ) => {
-//     (isDesktop) ? (
-//         galeriaFotos.addEventListener('click', agrandarImagenes)
-//     ) : (
-//         galeriaFotos.removeEventListener('click', agrandarImagenes)
-//     );
-// };
-
-
-
-// // lógica para agrandar fotos de galería al hacer click
-// const agrandarImagenes = (e) => {
-
-//     if (e.target.classList.contains('galeria-img')) {
-//         const imgSrc = e.target.src
-//         const imgAlt = e.target.alt
-
-//         bodyOverlay.classList.add('show-body-overlay');
-//         overlayImgContainer.innerHTML = `<img src="${ imgSrc }" alt="${ imgAlt }">`;
-//     }
-// };
 
 const renderizarIntegrantes = (integrantes) => {
     let linkFotoPorDefecto = "./public/images/bl-logo.png"
@@ -191,6 +153,7 @@ const renderizarFotos = (fotos) => {
                 class = "galeria-img"
                 src= ${linkFoto}
                 alt="Evento de BL Freestyle"
+                loading="lazy"
             />    
         `;
     });
@@ -226,7 +189,7 @@ const insertoVideos = ()=>{
     .then((json)=>{
         //Corro esta función que va a crear e imprimir los elementos iframe en el HTML en el lugar que corresponde
         json.forEach(element => {
-            galeriaVideos.innerHTML += `<iframe src="${element.iframe}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>`;
+            galeriaVideos.innerHTML += `<iframe src="${element.iframe}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy">`;
         });
     });
 };
