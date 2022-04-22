@@ -37,6 +37,35 @@ mediaQuery.addEventListener('change', () => {
     controlarEventoImagenes();
 });
 
+burgerButton.addEventListener('click', () => {
+    controlarMenu();
+});
+
+linkList.forEach((link) => {
+    link.addEventListener('click', () => {
+        controlarMenu();
+    });
+});
+
+menuMediaQuery.addEventListener('change', () => {
+    if(menuMediaQuery.matches) {
+        controlarMenu();
+    };
+});
+
+const controlarMenu = () => {
+    (menuIsOpen) ? (
+        navbarLinks.classList.remove('show-navbar__links'),
+        burgerButton.classList.remove('burger-button--toggle')
+    ) : (
+        navbarLinks.classList.add('show-navbar__links'),
+        burgerButton.classList.add('burger-button--toggle')
+    )
+
+    menuIsOpen = !menuIsOpen;
+};
+
+
 const controlarEventoImagenes = () => {
     galeriaFotos.removeEventListener('click', agrandarImagenes)
     galeriaFotos.addEventListener('click', agrandarImagenes)
