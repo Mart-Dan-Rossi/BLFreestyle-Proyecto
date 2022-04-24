@@ -14,7 +14,7 @@
     },
 
     {
-        "nombre" : "Homero Santa Maria",
+        "nombreCompleto" : "Homero Santa Maria",
         "rolTrabajo" : "DJ/Producer",
         "instagram" : "https://www.instagram.com/homer_sms/",
         "linkFoto" : "./recursos/Homero_Santa_Maria.jpg"

@@ -15,7 +15,7 @@
     />
 
     <link rel="stylesheet" href="./css/css.css" />
-
+    <link rel="shortcut icon" href="./public/images/iconoBL.png" type="image/x-icon"/>
     <title>BL-Freestyle</title>
   </head>
 
@@ -101,28 +101,31 @@
 
           <div class="quienessomos__integrantesbl__contenedor">
             <!-- Template para generar las cards => NO SE RENDERIZA -->
-            <template id="template-card-integrante">
-              <div class="integrantesbl__card">
-                <img
-                  class="card__img"
-                  src="https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
-                  alt="Francisco Langge"
-                />
-                <div class="integrantesbl__card--contenido">
-                  <div class="texto">
-                    <p class="tituloIntegrante">Francisco Langge</p>
-                    <span class="rolTrabajo"></span>
-                  </div>
-
-                  <a
-                    href="https://www.instagram.com/franlangge/"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-instagram card__icon"></i>
-                  </a>
+              <template id="template-card-integrante">
+                <div class="integrantesbl__card">
+                  <img
+                    class="card__img"
+                    src="https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+                    alt="Francisco Langge"
+                    />
+                    <div class="integrantesbl__card--contenedor">
+                      <div class="integrantesbl__card--contenido">
+                        <div class="texto">
+                          <p class="tituloIntegrante">Francisco Langge</p>
+                        <span class="rolTrabajo"></span>
+                      </div>
+    
+                      <a
+                        href="https://www.instagram.com/franlangge/"
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-instagram card__icon"></i>
+                      </a>
+                    </div>
+                    <img class="flechaDesplegarInfoIntegrante" src="./public/frame.svg" alt="Click para desplegar">
                 </div>
-              </div>
-            </template>
+              </template>
+            </div>
           </div>
         </div>
       </div>
@@ -149,25 +152,25 @@
           <h2 class="subtitulo">Próximos<span>Eventos</span></h2>
         </div>
         <div class="contenedorseccion__contenidoprincipal">
-          <!-- <iframe
+          <iframe
             class="calendario__formato--mes"
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FArgentina%2FBuenos_Aires&title=Fechas%20de%20BL%20Freestyle%20&src=YmxmcmVlc3R5bGUyMDIwQGdtYWlsLmNvbQ&src=dDIwN2VjbnU3aDZxaTZzamo0cjk3MnM3dDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMtNDE5LmFyI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23616161&color=%2333B679&color=%230B8043"
             style="border: solid 1px #777"
             frameborder="0"
             scrolling="no"
-          ></iframe> -->
+          ></iframe>
 
-          <!-- <iframe
+          <iframe
             class="calendario__formato--agenda"
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FArgentina%2FBuenos_Aires&mode=AGENDA&src=YmxmcmVlc3R5bGUyMDIwQGdtYWlsLmNvbQ&src=dDIwN2VjbnU3aDZxaTZzamo0cjk3MnM3dDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMtNDE5LmFyI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23616161&color=%2333B679&color=%230B8043"
             style="border: solid 1px #777"
             frameborder="0"
             scrolling="no"
-          ></iframe> -->
+          ></iframe>
 
-          <!-- <iframe
+          <iframe
             src="https://www.google.com/maps/d/u/2/embed?mid=1p4dIUtlhI-SuipUQmHl5fivi4iOs_FEv&ehbc=2E312F"
-          ></iframe> -->
+          ></iframe>
         </div>
       </div>
 

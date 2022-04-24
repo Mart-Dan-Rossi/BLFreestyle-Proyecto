@@ -98,7 +98,7 @@ header {
 }
 
 .burger-button div{
-    width: 1.5rem;
+    width: 1.3rem;
     height: 3.2px;
     background-color: #000;
 }
@@ -113,10 +113,9 @@ header {
     width: 100%;
     /* Se le resta la altura del nav */
     height: calc(100vh - 71.6px);
-    /* height: 100vh; */
     position: relative;
 
-    background-image: url('../public/images/hero.png');
+    background-image: url('../public/images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,6 +147,7 @@ header {
 .hero-section__logo {
     width: 320px;
     aspect-ratio: 1;
+    transform: translateX(-32px);
 }
 
 /* ==== Fin Hero === */
@@ -178,7 +178,7 @@ main {
 }
 
 .titulo-quienes-somos {
-    background-image: url(../public/images/quienes-somos-img.png);
+    background-image: url("../public/images/quienes-somos-img.jpg");
 }
 
 .contenedorseccion__tituloseccion::before {
@@ -312,32 +312,46 @@ h4, .tituloIntegrante {
     color: var(--color1);
 }
 
-.integrantesbl__card--contenido {
-   position: absolute;
-   left: 0;
-   top: 0;
-   height: 100%;
-   width: 100%;
-   background-color: rgba(42, 43, 43, 0.6);
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-   align-items: center;
-   transform: translateX(-100%);
-   transition: all 0.7s ease-in-out;
+.integrantesbl__card--contenedor {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all 0.7s ease-in-out;
 }
 
-.integrantesbl__card:hover .integrantesbl__card--contenido{
+.integrantesbl__card--contenido {
+    background-color: rgba(42, 43, 43, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 9rem;
+}
+
+.integrantesbl__card:hover .integrantesbl__card--contenedor{
    transform: translateX(0);
 }
 
+.flechaDesplegarInfoIntegrante {
+    height: 21px;
+    width: 21px;
+    margin: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(157px, -50%);
+    filter: drop-shadow(-1px 0px 3px rgba(0, 0, 0, 0.397));
+}
 
 /* ===== FIN QUIENES SOMOS ====== */
 
 
 /* ======== GALERÍA ======= */
 .titulo-galeria {
-    background-image: url('../public/images/galeria-img.png');
+    background-image: url('../public/images/galeria-img.jpg');
 }
 
 .galeria__fotos__contenedor, .galeria__videos__contenedor {
@@ -382,7 +396,7 @@ h4, .tituloIntegrante {
 
 /* ======== EVENTOS ======= */
 .titulo-eventos {
-    background-image: url('../public/images/eventos-img.png');
+    background-image: url('../public/images/eventos-img.jpg');
 }
 
 .calendario__formato--agenda {
@@ -408,7 +422,7 @@ h4, .tituloIntegrante {
 
 /* ==== CONTACTO ==== */
 .titulo-contacto {
-    background-image: url('../public/images/contacto-img.png');
+    background-image: url('../public/images/contacto-img.jpg');
 }
 
 .contenedorseccion__contenidoprincipal--contacto {
@@ -432,7 +446,7 @@ h4, .tituloIntegrante {
 }
 
 .formulariocontacto__texto p {
-    font-size: var(--fontunpocomasgrande);
+    font-size: var(--fontpequenia);
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
@@ -450,7 +464,7 @@ h4, .tituloIntegrante {
 }
 
 .form label {
-    font-size: var(--fontmediana);
+    font-size: var(--fontpequenia);
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
@@ -471,7 +485,6 @@ h4, .tituloIntegrante {
 
 .form button {
     height: 3.5rem;
-    width: 15rem;
     align-self: center;
     padding: 0.7rem 3.5rem;
     border: none;
@@ -479,15 +492,15 @@ h4, .tituloIntegrante {
     background-color: #E7B840;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    font-size: var(--fontunpocomasgrande);
+    font-size: var(--fontmediana);
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
+    box-shadow: 10px 6px 26px -8px rgb(0 0 0 / 40%);    
 }
 
 .form button:hover {
     transform: scale(1.05);
-    box-shadow: 10px 6px 26px -8px rgba(0,0,0,0.4);
 }
 
 
@@ -498,11 +511,9 @@ footer {
 
 .contenedor__redes {    
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 2.2rem;
-    row-gap: 1rem;
+    column-gap: 8%;
     margin-top: 1.3rem;
 }
 
@@ -582,18 +593,36 @@ footer a:hover {
 
 /* ============== MEDIA QUERY ============== */
 @media screen and (max-width: 832px) {
+    header {        
+        position: fixed;
+        top: 11px;
+        right: 11px;
+        background-color: #ffffffa8;
+        padding: 10px;
+        border-radius: 50%;
+        height: 49px;
+        aspect-ratio: 1;
+    }
     
+    .hero-section {
+        height: 100vh;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
     .navbar__links{
         position: fixed;
         right: 0;
         top: 71.6px;
-        height: 100vh;
         width: 40%;
         background-color: #fff;
+        box-shadow: -13px 6px 26px -8px rgb(0 0 0 / 40%);
 
         flex-direction: column;
         justify-content: flex-start;
-        transform: translateX(100%);
+        transform: translateX(110%);
         transition: transform 0.4s ease-in-out;
     }
 
@@ -602,7 +631,6 @@ footer a:hover {
     }
 
     .navbar__links li {
-        padding: 1rem;
         width: 100%;
     }
 
@@ -629,6 +657,8 @@ footer a:hover {
         transform: rotate(45deg) translate(-5.5px, -4.5px);
         transition: all 0.4s ease-in-out;
     }
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -644,19 +674,41 @@ footer a:hover {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .navbar__links{
+@media (max-width: 578px) {
+    .contenedor__redes a {
+        width: 2rem;
+    }
+    
+    .fa-brands {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    #contacto .contenedorseccion__contenidoprincipal {
         width: 100%;
     }
 }
 
 @media (max-width: 599px) {
+    .navbar__links{
+        width: 70%;
+    }
+
+    .card__img {
+        height: 150%;
+    }
+
     .calendario__formato--mes {
         display: none;
     }
     
     .calendario__formato--agenda {
         display: block;
+    }
+
+    #eventos .contenedorseccion__contenidoprincipal {
+        grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
     }
 }
 
@@ -677,6 +729,10 @@ footer a:hover {
 
     .subtitulo span {
         font-size: 2.5rem;
+    }
+
+    .formulariocontacto__contenedor {
+        padding: 5rem 0.5rem;
     }
 }
 

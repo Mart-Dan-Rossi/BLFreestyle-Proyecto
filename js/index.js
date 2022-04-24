@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 mediaQuery.addEventListener('change', () => {
     controlarEventoImagenes();
+    console.log("Emm")
 });
 
 burgerButton.addEventListener('click', () => {
@@ -105,7 +106,7 @@ const escondoOverleyImagen = (e) => {
 
 
 const renderizarIntegrantes = (integrantes) => {
-    let linkFotoPorDefecto = "./public/images/bl-logo.png"
+    let linkFotoPorDefecto = "./public/images/bl-logo.svg"
 
     integrantes.forEach((integrante) => {
         const {
