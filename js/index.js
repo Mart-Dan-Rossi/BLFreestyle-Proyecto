@@ -125,11 +125,10 @@ const renderizarIntegrantes = (integrantes) => {
             clone.querySelector('.card__img').src = linkFoto;
         }
         clone.querySelector('.card__img').alt = `Foto de ${nombreCompleto}`;
+        
         (rolTrabajo) ? (
-            clone.querySelector('.tituloIntegrante').innerHTML = `
-                ${ nombreCompleto }
-                <small>${rolTrabajo}</small>
-            `
+            clone.querySelector('.tituloIntegrante').innerHTML = `${ nombreCompleto }`,
+            clone.querySelector(".rolTrabajo").innerHTML = `${rolTrabajo}`
         ) : (
             clone.querySelector('.tituloIntegrante').textContent = nombreCompleto
         )

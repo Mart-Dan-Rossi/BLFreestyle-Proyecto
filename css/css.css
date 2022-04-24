@@ -14,6 +14,7 @@ html {
     --color3: lightgrey;
     --color4: rgba(176, 176, 176, 1);
     --main-color: #F8C643;
+    --quienesSomosColorFondo: #f8c643ab;
     /* --body-bg-color: #E5E5E5; */
     --body-bg-color: #fff;
 
@@ -31,6 +32,7 @@ html {
     --fontgrande: 1.5rem;
     --fontunpocomasgrande: 1.125rem;
     --fontmediana: 1rem;
+    --fontpequenia: 0.8rem;
 }
 
 * {
@@ -267,7 +269,7 @@ h4, .tituloIntegrante {
 
 /* Template para las cards */
 .integrantesbl__card {
-    width: 12%;
+    width: 9rem;
     min-width: 137px;
     height: 35vw;
     max-height: 350px;
@@ -286,22 +288,26 @@ h4, .tituloIntegrante {
     object-fit: cover;
 }
 
-.tituloIntegrante {
+.texto {
     font-size: var(--fontgrande);
     font-weight: bold;
     color: var(--color1);
     text-align: center;
-    background-color: var(--main-color);
+    background-color: var(--quienesSomosColorFondo);
     width: 100%;
+    height: 4rem;
     padding-block: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.tituloIntegrante small {
-    display: block;
+.rolTrabajo {
+    font-size: var(--fontpequenia);
 }
 
 .integrantesbl__card--contenido .card__icon {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     margin-block: 7px;
     color: var(--color1);
 }
