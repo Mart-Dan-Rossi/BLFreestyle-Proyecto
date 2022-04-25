@@ -199,7 +199,7 @@ main {
     position: relative;
     margin-inline: 5rem;
     padding-block: 2rem;
-    color: var(--color1);
+    color: #aaa;
     z-index: 100;
     font-style: normal;
     line-height: 64px;
@@ -211,6 +211,7 @@ main {
     font-weight: 700;    
     font-size: var(--fontextragrande);
     line-height: 56px;
+    color: var(--color1);
 }
 
 #eventos h2 span, #galeria h2 span, #quienes-somos h2 span {
@@ -604,7 +605,7 @@ footer a:hover {
         right: 11px;
         background-color: #ffffffc9;
         padding: 10px;
-        border-radius: 50%;
+        border-radius: 20%;
         height: 49px;
         aspect-ratio: 1;
     }
