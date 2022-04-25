@@ -53,7 +53,7 @@ body {
 /* ======= Navbar ======= */
 header {
     height: 71.6px;
-    background-color: var(--body-bg-color);
+    background-color: #27282D;
     position: sticky;
     top: 0;
     z-index: 100;
