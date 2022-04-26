@@ -110,6 +110,7 @@ const renderizarIntegrantes = (integrantes) => {
     integrantes.forEach((integrante) => {
         const {
             nombreCompleto,
+            segundoRenglonNombre,
             rolTrabajo,
             instagram,
             linkFoto
@@ -124,14 +125,15 @@ const renderizarIntegrantes = (integrantes) => {
         else {
             clone.querySelector('.card__img').src = linkFoto;
         }
-        clone.querySelector('.card__img').alt = `Foto de ${nombreCompleto}`;
+        clone.querySelector('.card__img').alt = `Foto de ${nombreCompleto}`
         
-        (rolTrabajo) ? (
-            clone.querySelector('.tituloIntegrante').innerHTML = `${ nombreCompleto }`,
+        clone.querySelector('.nombreCompleto').innerHTML = `${ nombreCompleto }`
+        if (segundoRenglonNombre) {
+            clone.querySelector(".segundoRenglonNombre").innerHTML = segundoRenglonNombre
+        }
+        if (rolTrabajo) {
             clone.querySelector(".rolTrabajo").innerHTML = `${rolTrabajo}`
-        ) : (
-            clone.querySelector('.tituloIntegrante').textContent = nombreCompleto
-        )
+        }
         clone.querySelector('a').href = instagram;
         
         // Se adjuntan cada una de las cards generadas al fragment => Evita el reflow

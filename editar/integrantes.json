@@ -1,6 +1,7 @@
 [
     {
         "nombreCompleto" : "Francisco Langge",
+        "segundoRenglonNombre" : "",
         "rolTrabajo" : "Director General",
         "instagram" : "https://www.instagram.com/franlangge/",
         "linkFoto" : "./recursos/Francisco_Langge.jpg"    
@@ -8,13 +9,15 @@
 
     {
         "nombreCompleto" : "Joaquin Galocha",
+        "segundoRenglonNombre" : "",
         "rolTrabajo" : "Director de Marketing",
         "instagram" : "https://www.instagram.com/joaquingalocha/",
         "linkFoto" : "./recursos/Joaquin_Galocha.jpg"
     },
 
     {
-        "nombreCompleto" : "Homero Santa Maria",
+        "nombreCompleto" : "Homero",
+        "segundoRenglonNombre" : "Santa Maria",
         "rolTrabajo" : "DJ/Producer",
         "instagram" : "https://www.instagram.com/homer_sms/",
         "linkFoto" : "./recursos/Homero_Santa_Maria.jpg"
@@ -22,6 +25,7 @@
 
     {
         "nombreCompleto" : "Aitana Campos",
+        "segundoRenglonNombre" : "",
         "rolTrabajo" : "Asistente de Producción",
         "instagram" : "https://www.instagram.com/aiticampos/",
         "linkFoto" : "./recursos/Aitana_Campos.jpg"
@@ -29,6 +33,7 @@
 
     {
         "nombreCompleto" : "Marco Lanzoni",
+        "segundoRenglonNombre" : "",
         "rolTrabajo" : "Audiovisual",
         "instagram" : "https://www.instagram.com/marcolanzonilarra/",
         "linkFoto" : "./recursos/Marco_Lanzoni_Larra.jpg"
@@ -37,6 +42,7 @@
 
     {
         "nombreCompleto" : "Octavio Hidalgo",
+        "segundoRenglonNombre" : "",
         "rolTrabajo" : "",
         "instagram" : "https://www.instagram.com/octahidalgo/",
         "linkFoto" : "./recursos/Octavio_Hidalgo.jpg"
@@ -44,6 +50,7 @@
 
     {
         "nombreCompleto" : "Siro Prieto",
+        "segundoRenglonNombre" : "",
         "rolTrabajo" : "Comercial",
         "instagram" : "https://www.instagram.com/siro.prieto/",
         "linkFoto" : "./recursos/Siro_Prieto.jpg"

@@ -229,7 +229,7 @@ h3 {
     font-size: var(--fontmuygrande);
 }
 
-h4, .tituloIntegrante {
+h4, .nombreCompleto, .segundoRenglonNombre {
     font-size: var(--fontgrande);
     color: var(--color0);
 }
