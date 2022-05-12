@@ -50,6 +50,10 @@ body {
     color: var(--color1);
 }
 
+.displayNone {
+    display: none;
+}
+
 /* ======= Navbar ======= */
 header {
     height: 71.6px;
@@ -254,7 +258,7 @@ h4, .nombreCompleto, .segundoRenglonNombre {
 
 /* ======= QUIENES SOMOS ======== */
 
-/*A HACER cambiar esto para que sea con flex pero cambiando el ancho de las imágenes para que se comporte como flex de forma correcta*/
+
 .quienessomos__integrantesbl__contenedor {
     margin: 3rem auto;
     display: flex;
@@ -262,12 +266,6 @@ h4, .nombreCompleto, .segundoRenglonNombre {
     justify-content: center;
     flex-wrap: wrap;
 }
-
-/* .quienessomos__integrantesbl__contenedor {
-    margin: 3rem auto;
-    display: flex;
-    gap: 1.5rem;
-} */
 
 /* Template para las cards */
 .integrantesbl__card {
