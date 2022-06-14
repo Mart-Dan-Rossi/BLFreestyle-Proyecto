@@ -1,0 +1,2 @@
+Las imágenes de los integrantes no hace falta que tengan más de 300 px de ancho.
+El resto de las imágenes no hace falta que tengan más de 500px de ancho.

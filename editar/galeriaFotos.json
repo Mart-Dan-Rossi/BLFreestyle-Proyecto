@@ -1,41 +1,41 @@
 [
     {
-        "linkFoto": "../recursos/FED_6493.JPG"
+        "nombreFoto": "FED_6493.JPG"
     },
 
     {
-        "linkFoto": "../recursos/FED_8048.JPG"
+        "nombreFoto": "FED_8048.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG_0983.JPG"
+        "nombreFoto": "IMG_0983.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG_3514.JPG"
+        "nombreFoto": "IMG_3514.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG_3534.JPG"
+        "nombreFoto": "IMG_3534.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG_3844.JPG"
+        "nombreFoto": "IMG_3844.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG_4126.JPG"
+        "nombreFoto": "IMG_4126.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG_5524.JPG"
+        "nombreFoto": "IMG_5524.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG_6441.JPG"
+        "nombreFoto": "IMG_6441.JPG"
     },
 
     {
-        "linkFoto": "../recursos/IMG-20200302-WA0026.jpg"
+        "nombreFoto": "IMG-20200302-WA0026.jpg"
     }
 ]

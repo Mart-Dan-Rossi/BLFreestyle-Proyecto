@@ -4,7 +4,7 @@
         "segundoRenglonNombre" : "",
         "rolTrabajo" : "Director General",
         "instagram" : "https://www.instagram.com/franlangge/",
-        "linkFoto" : "./recursos/Francisco_Langge.jpg"    
+        "nombreFoto" : "Francisco_Langge.jpg"    
     },
 
     {
@@ -12,7 +12,7 @@
         "segundoRenglonNombre" : "",
         "rolTrabajo" : "Director de Marketing",
         "instagram" : "https://www.instagram.com/joaquingalocha/",
-        "linkFoto" : "./recursos/Joaquin_Galocha.jpg"
+        "nombreFoto" : "Joaquin_Galocha.jpg"
     },
 
     {
@@ -20,7 +20,7 @@
         "segundoRenglonNombre" : "Santa Maria",
         "rolTrabajo" : "DJ/Producer",
         "instagram" : "https://www.instagram.com/homer_sms/",
-        "linkFoto" : "./recursos/Homero_Santa_Maria.jpg"
+        "nombreFoto" : "Homero_Santa_Maria.jpg"
     },
 
     {
@@ -28,7 +28,7 @@
         "segundoRenglonNombre" : "",
         "rolTrabajo" : "Asistente de Producción",
         "instagram" : "https://www.instagram.com/aiticampos/",
-        "linkFoto" : "./recursos/Aitana_Campos.jpg"
+        "nombreFoto" : "Aitana_Campos.jpg"
     },
 
     {
@@ -36,7 +36,7 @@
         "segundoRenglonNombre" : "",
         "rolTrabajo" : "Audiovisual",
         "instagram" : "https://www.instagram.com/marcolanzonilarra/",
-        "linkFoto" : "./recursos/Marco_Lanzoni_Larra.jpg"
+        "nombreFoto" : "Marco_Lanzoni_Larra.jpg"
     },
 
 
@@ -45,7 +45,7 @@
         "segundoRenglonNombre" : "",
         "rolTrabajo" : "Director de Talleres",
         "instagram" : "https://www.instagram.com/octahidalgo/",
-        "linkFoto" : "./recursos/Octavio_Hidalgo.jpg"
+        "nombreFoto" : "Octavio_Hidalgo.jpg"
     },
 
     {
@@ -53,6 +53,6 @@
         "segundoRenglonNombre" : "",
         "rolTrabajo" : "Comercial",
         "instagram" : "https://www.instagram.com/siro.prieto/",
-        "linkFoto" : "./recursos/Siro_Prieto.jpg"
+        "nombreFoto" : "Siro_Prieto.jpg"
     }
 ]

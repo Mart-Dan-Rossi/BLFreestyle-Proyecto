@@ -1,3 +1,4 @@
+
 const integrantesJSON = "../editar/integrantes.json";
 const fotosJSON = "../editar/galeriaFotos.json";
 const videosJSON = "../editar/galeriaVideos.json";
@@ -113,17 +114,17 @@ const renderizarIntegrantes = (integrantes) => {
             segundoRenglonNombre,
             rolTrabajo,
             instagram,
-            linkFoto
+            nombreFoto
         } = integrante;
 
         const clone = templateIntegrantes.cloneNode(true);
 
-        if (linkFoto == ""){
+        if (nombreFoto == ""){
             clone.querySelector('.card__img').src = linkFotoPorDefecto;
             clone.querySelector('.card__img').style = "object-fit: scale-down"
         }
         else {
-            clone.querySelector('.card__img').src = linkFoto;
+            clone.querySelector('.card__img').src = isDesktop ? `./recursos/${nombreFoto}` : `./recursos/img_menos_calidad/${nombreFoto}`;
         }
         clone.querySelector('.card__img').alt = `Foto de ${nombreCompleto}`
         
@@ -147,12 +148,13 @@ const renderizarIntegrantes = (integrantes) => {
 const renderizarFotos = (fotos) => {
     
     fotos.forEach((foto) => {
-        const { linkFoto } = foto;
+        const { nombreFoto } = foto;
+        let src = isDesktop ? `../recursos/${nombreFoto}` : `../recursos/img_menos_calidad/${nombreFoto}`
 
         galeriaFotos.innerHTML += `
             <img
                 class = "galeria-img"
-                src= ${linkFoto}
+                src= ${src}
                 alt="Evento de BL Freestyle"
                 loading="lazy"
             />    
